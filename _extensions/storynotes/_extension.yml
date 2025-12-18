@@ -1,0 +1,37 @@
+title: Storynotes-format
+author: Tony Hirst
+version: 1.0.0
+quarto-required: ">=1.6.0"
+contributes:
+  formats:
+    html:
+      toc: true
+      theme: [custom.scss]
+      filters:
+        - verse
+    pdf:
+      toc: true
+      documentclass: book
+      papersize: a5
+      fontsize: 12pt
+      mainfont: "Times New Roman"
+      classoption: [twoside]
+      geometry:
+        - inner=0.8in
+        - outer=0.5in
+        - top=0.9in
+        - bottom=0.9in
+      keep-tex: true
+      pdf-engine: xelatex
+      toc-title: "Contents"
+      toc-depth: 1
+      latex-auto-install: false
+      # Include the shared LaTeX styling
+      include-in-header: 
+        - ./shared-book-style.tex
+      template-partials:
+        - ./title.tex
+        - ./before-body.tex
+        - ./storynotes_copyright.tex
+      filters:
+        - verse

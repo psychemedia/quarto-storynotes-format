@@ -1,0 +1,42 @@
+$if(title)$
+\title{$title$}
+$endif$
+
+$if(subtitle)$
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{%
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{$subtitle$}
+$endif$
+
+$-- Quarto authors normalization
+\author{$for(authors)$$it.name.literal$$sep$ \and $endfor$}
+\date{$date$}
+
+% TH: Update the title page style with custom style
+\makeatletter
+\renewcommand{\maketitle}{%
+  \thispagestyle{plain}
+  \noindent\rule{\linewidth}{1pt}\par
+  \begingroup
+    \hypersetup{pdfauthor={\@author}, pdftitle={\@title}}%
+  \endgroup
+  \begin{flushright}
+    \vspace{48pt}
+    {\headingfont
+    {\fontsize{44pt}{56pt}\selectfont \setlength{\baselineskip}{56pt}%
+    \@title\par}
+    \vspace{96pt}
+    {\Large \@author}\par
+    \vspace{25pt}
+    \@date \par
+    }
+  \end{flushright}
+
+  \setcounter{footnote}{0}
+  \let\thanks\relax\let\maketitle\relax
+}
+\makeatother

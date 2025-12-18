@@ -1,0 +1,18 @@
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+\maketitle
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+$endif$
+
+% TH: Add copyright page and notices after title page
+
+\clearpage
+%\input{./storynotes_copyright}
+$storynotes_copyright$
+\clearpage

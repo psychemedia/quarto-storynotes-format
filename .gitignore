@@ -1,2 +1,4 @@
 /.quarto/
+_quarto_book
 .DS_Store
+site_libs

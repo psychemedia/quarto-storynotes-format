@@ -1,0 +1,69 @@
+---
+title: "Verse Extension Test"
+header-includes:
+  - \usepackage{verse}
+  - \usepackage{multicol}
+format:
+  html:
+    css: _extensions/verse/verse.css
+    filters:
+      - verse
+  pdf:
+    keep-tex: true
+    filters:
+      - verse
+---
+
+# Basic Verse
+
+::: {.verse linenumbers="1" linenumside="left"}
+Two roads diverged in a yellow wood,  
+And sorry I could not travel both  
+And be one traveler, long I stood  
+:::
+
+# With Title and Options
+
+
+
+::: {.verse title="Fragment" linenumbers="2" linenumside="right" firstlinenum="95"  indentafter="0101" }
+Whose woods these are I think I know.  
+His house is in the village though;  
+He will not see me stopping here  
+To watch his woods fill up with snow.
+
+Whose woods these are I think I know.
+His house is in the village though;
+He will not see me stopping here
+To watch his woods fill up with snow.
+
+Whose woods these are I think I know.
+His house is in the village though;
+He will not see me stopping here
+To watch his woods fill up with snow.
+
+Whose woods these are I think I know.
+His house is in the village though;
+He will not see me stopping here
+To watch his woods fill up with snow.
+
+Whose woods these are I think I know.
+His house is in the village though;
+He will not see me stopping here
+To watch his woods fill up with snow.
+
+Whose woods these are I think I know.
+His house is in the village though;
+He will not see me stopping here
+To watch his woods fill up with snow.
+
+Whose woods these are I think I know.
+His house is in the village though;
+He will not see me stopping here
+To watch his woods fill up with snow.
+
+Whose woods these are I think I know.
+His house is in the village though;
+He will not see me stopping here
+To watch his woods fill up with snow.
+:::

@@ -1,0 +1,25 @@
+% verse.tex
+% Load the verse package with options into the header
+%\usepackage{verse}
+
+% Customize verse package defaults
+\setlength{\vrightskip}{0pt plus 1fil}
+\setlength{\stanzaskip}{0.5\baselineskip}
+
+% Define a command for poem titles (if not using poemtitle)
+\providecommand{\poemtitle}[1]{%
+  \vspace{\baselineskip}%
+  {\centering\textbf{#1}\par}%
+  \vspace{0.5\baselineskip}%
+}
+
+\providecommand{\poemattrib}[1]{%
+    \attrib{\textit{#1}}%
+}
+
+
+% Set default line number font
+\verselinenumfont{\small\rmfamily}
+
+% Optional: Define additional verse-related commands
+\newcommand{\stanzabreak}{\vspace{\stanzaskip}}
