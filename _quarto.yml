@@ -1,0 +1,14 @@
+project:
+  type: book
+  output-dir: _quarto_book
+
+book:
+  title: "TEST"
+  author: "Tony 'Monty' Hirst"
+  date: ""
+  chapters:
+    - index.qmd
+
+format:
+  storynotes-html: default
+  storynotes-pdf: default
