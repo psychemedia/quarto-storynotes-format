@@ -7,6 +7,7 @@
 \usepackage[most]{tcolorbox} % for admonitions
 \usepackage{verse}
 
+% Add font support for Middle English alphabet / Middle English characters
 \newfontfamily{\medievalfont}{Junicode}
 
 \AtBeginDocument{
@@ -33,10 +34,10 @@
     \cleardoublepage
     \pagestyle{normal} 
   }
-
+        
   % Spacing after paragraph in admonition block
   % Bold font in admonition header
-  \tcbset{before upper={\setlength{\parskip}{1em}\setlength{\parindent}{0pt}}, fonttitle=\bfseries}
+  \tcbset{top=4mm, bottom=2mm, before upper={\setlength{\parskip}{1em}\setlength{\parindent}{0pt}}, fonttitle=\bfseries}
 
   % Fettle space around image
   \setlength{\intextsep}{5pt}
