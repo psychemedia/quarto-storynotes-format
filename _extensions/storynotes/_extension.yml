@@ -7,6 +7,7 @@ contributes:
     html:
       toc: true
       theme: [custom.scss]
+      callout-icon: false
       filters:
         - verse
     pdf:
@@ -33,5 +34,6 @@ contributes:
         - ./title.tex
         - ./before-body.tex
         - ./storynotes_copyright.tex
+      callout-icon: false
       filters:
         - verse
