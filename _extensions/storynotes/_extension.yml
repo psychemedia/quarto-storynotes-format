@@ -33,6 +33,7 @@ contributes:
       template-partials:
         - ./title.tex
         - ./before-body.tex
+      format-resources:
         - ./storynotes_copyright.tex
       callout-icon: false
       filters:
