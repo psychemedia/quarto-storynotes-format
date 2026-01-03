@@ -6,7 +6,9 @@
 \usepackage{geometry}
 \usepackage[most]{tcolorbox} % for admonitions
 \usepackage{verse}
-
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{0.6\textwidth}
+        
 % Add font support for Middle English alphabet / Middle English characters
 \newfontfamily{\medievalfont}{Junicode}
 
@@ -34,7 +36,7 @@
     \cleardoublepage
     \pagestyle{normal} 
   }
-        
+  
   % Spacing after paragraph in admonition block
   % Bold font in admonition header
   \tcbset{top=4mm, bottom=2mm, before upper={\setlength{\parskip}{1em}\setlength{\parindent}{0pt}}, fonttitle=\bfseries}
@@ -62,8 +64,27 @@
 \let\oldtexttt\texttt        % save original \texttt
 \renewcommand{\texttt}[1]{{\footnotesize\oldtexttt{#1}}}
 
+\renewcommand{\titleline}[1]{%
+        \vspace{0.8em}
+        \noindent\rule{\linewidth}{0.4pt}
+        \vspace{0.8em}
+        \begin{center}
+          \textbf{#1}
+        \end{center}
+        \vspace{0.5em}
+        }
+\newcommand{\subtitleline}[1]{%
+          \vspace{-0.3em}
+          \begin{center}
+            \textit{#1}
+          \end{center}
+          \vspace{0.5em}
+        }
+        
+
 % Custom page styles with fancyhdr
 \usepackage{fancyhdr}
+
 \makeatletter
 \fancypagestyle{normal}{
     \fancyhf{}
@@ -78,7 +99,6 @@
 }
 \makeatother
 
-
 \fancypagestyle{plain}{
     % first page of new chapter
     \fancyhf{}
@@ -87,6 +107,9 @@
     \addtolength{\textheight}{20pt}
     \renewcommand{\headrulewidth}{0pt}
 }
+
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}}
 
 % New header
 %\usepackage{titling}

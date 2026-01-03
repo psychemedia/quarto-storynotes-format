@@ -15,3 +15,8 @@ date: last-modified
 
 You can learn more about controlling the appearance of HTML output here: <https://quarto.org/docs/output-formats/html-basics.html>
 
+in the preface, use:
+
+`---`  
+`number: false`  
+`---`

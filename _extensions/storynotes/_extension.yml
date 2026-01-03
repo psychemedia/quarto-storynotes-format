@@ -38,3 +38,12 @@ contributes:
       callout-icon: false
       filters:
         - verse
+
+    docx:
+      toc: false
+      callout-icon: false
+
+    epub:
+      toc: true
+      callout-icon: false
+      #epub-cover-image: 
